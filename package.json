@@ -1,0 +1,41 @@
+{
+  "name": "dsh-wide-chat",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "会话内容区随窗口铺满，左右只保留小边距。",
+  "icon": "./icon.svg",
+  "license": "MIT",
+  "author": "Quincy-Leo <quincy-leo@foxmail.com>",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness"
+  ],
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./icon": "./icon.svg",
+    "./locale/*.json": "./locale/*.json",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "locale",
+    "icon.svg",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true
+    }
+  },
+  "engines": {
+    "dsh": ">=0.2.0-rc.1 <0.3.0-0"
+  }
+}
